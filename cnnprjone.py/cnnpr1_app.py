@@ -13,7 +13,7 @@ class_labels = [
 ]
 
 # Streamlit UI
-st.title("CIFAR-10 Face Recognition")
+st.title("LFW Face Recognition")
 st.write("Upload an image and the model will predict its class.")
 
 # Upload image
