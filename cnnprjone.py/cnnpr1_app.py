@@ -26,4 +26,14 @@ uploaded_file = st.file_uploader("Choose an image...", type=["jpg", "png"])
 if uploaded_file is not None:
     # Process image
     image = Image.open(uploaded_file).convert('RGB')
-    image = image.resize((32,
+    image = image.resize((32, 32))  # Resize to CIFAR-10 input size
+    image_array = np.array(image) / 255.0  # Normalize
+    image_array = np.expand_dims(image_array, axis=0)  # Add batch dimension
+
+    # Make prediction
+    predictions = model.predict(image_array)
+    predicted_class = class_labels[np.argmax(predictions)]
+
+    # Show result
+    st.image(image, caption="Uploaded Image", use_column_width=True)
+    st.write(f"Prediction: **{predicted_class}**")
