@@ -1,5 +1,9 @@
+import os
 import streamlit as st
-os.system('pip install tensorflow-cpu')
+
+# ✅ Install dependencies BEFORE importing TensorFlow
+os.system('pip install tensorflow-cpu numpy pillow')
+
 import tensorflow as tf
 import numpy as np
 from PIL import Image
@@ -18,7 +22,6 @@ st.title("LFW Face Recognition")
 st.write("Upload an image and the model will predict its class.")
 
 # Upload image
-'''
 uploaded_file = st.file_uploader("Choose an image...", type=["jpg", "png"])
 
 if uploaded_file is not None:
@@ -35,4 +38,3 @@ if uploaded_file is not None:
     # Show result
     st.image(image, caption="Uploaded Image", use_column_width=True)
     st.write(f"Prediction: **{predicted_class}**")
-'''
