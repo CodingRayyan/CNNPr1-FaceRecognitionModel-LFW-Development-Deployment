@@ -1,4 +1,4 @@
-![image](https://github.com/user-attachments/assets/e51fc620-c69f-4cf2-92ca-35ca3dd0264b)
+![image](https://github.com/user-attachments/assets/f41dad73-e554-4d92-ab4b-bf70ad258986)
 
 # CNN Project01: Face Recognition using LFW DataSet
 
