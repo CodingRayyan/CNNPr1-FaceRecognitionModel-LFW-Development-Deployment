@@ -1,5 +1,6 @@
 import streamlit as st
 import tensorflow as tf
+os.system('pip install tensorflow-cpu')
 import numpy as np
 from PIL import Image
 
